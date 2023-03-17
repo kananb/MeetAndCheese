@@ -6,7 +6,7 @@ WORKDIR /app
 # install packages
 COPY package.json package.json
 COPY package-lock.json package-lock.json
-RUN npm i --production --no-audit
+RUN npm ci --omit=dev --no-audit
 
 # copy source files
 COPY public public
