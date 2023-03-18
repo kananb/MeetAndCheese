@@ -3,6 +3,9 @@
 FROM node:latest AS builder
 WORKDIR /app
 
+# copy .env
+COPY .env .env
+
 # install packages
 COPY package.json package.json
 COPY package-lock.json package-lock.json
